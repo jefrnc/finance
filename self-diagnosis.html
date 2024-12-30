@@ -22,6 +22,11 @@
         h1, h3 {
             text-align: center;
         }
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
         .question {
             margin-bottom: 20px;
         }
@@ -43,25 +48,51 @@
         button:hover {
             background-color: #0056b3;
         }
+        .print-button {
+            margin-top: 20px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            cursor: pointer;
+        }
+        .print-button:hover {
+            background-color: #FFC107;
+        }
         .result {
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
             font-size: 18px;
             color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .result.success {
+            background-color: #DFF2BF;
+            color: #4F8A10;
+        }
+        .result.warning {
+            background-color: #FEEFB3;
+            color: #9F6000;
+        }
+        .result.danger {
+            background-color: #FFBABA;
+            color: #D8000C;
         }
         .feedback {
             margin-top: 10px;
             font-size: 16px;
             color: #555;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Autodiagnóstico Financiero</h1>
+        <p class="intro">Conocer tu situación financiera actual es el primer paso hacia la estabilidad y el éxito económico. Este cuestionario te ayudará a identificar áreas de mejora y fortalezas en tus hábitos financieros.</p>
         <form id="financeForm">
-            <!-- Pregunta 1 -->
+            <!-- Preguntas -->
             <div class="question">
                 <h3>1. ¿Cómo gestionas tus gastos mensuales?</h3>
                 <label><input type="radio" name="q1" value="10" required> Apunto todos los gastos del mes en una libreta</label>
@@ -70,7 +101,6 @@
                 <label><input type="radio" name="q1" value="0"> Gasto sin control y reviso mi estado financiero al final del mes</label>
             </div>
 
-            <!-- Pregunta 2 -->
             <div class="question">
                 <h3>2. ¿Cómo manejas tus tarjetas?</h3>
                 <label><input type="radio" name="q2" value="0" required> Uso varias tarjetas y no tengo claro el total de mis deudas</label>
@@ -161,6 +191,7 @@
             </div>
 
             <button type="button" onclick="calculateScore()">Calcular Puntaje</button>
+            <button type="button" class="print-button" onclick="window.print()">Imprimir Resultados</button>
         </form>
         <div id="result" class="result"></div>
         <div id="feedback" class="feedback"></div>
@@ -179,14 +210,18 @@
             const result = document.getElementById('result');
             const feedback = document.getElementById('feedback');
 
-            result.textContent = `Tu puntaje total es ${totalScore}.`;
-
             if (totalScore <= 50) {
-                feedback.textContent = "Salud financiera en riesgo: Necesitas mejorar tus hábitos financieros y establecer un control más riguroso de tus gastos e ingresos.";
+                result.textContent = `Tu puntaje total es ${totalScore}. Salud financiera en riesgo.`;
+                result.className = 'result danger';
+                feedback.textContent = "Necesitas mejorar tus hábitos financieros y establecer un control más riguroso de tus gastos e ingresos.";
             } else if (totalScore <= 100) {
-                feedback.textContent = "Gestión financiera aceptable: Estás en el camino correcto, pero hay áreas de mejora. Considera planificar mejor y diversificar tus ingresos.";
+                result.textContent = `Tu puntaje total es ${totalScore}. Gestión financiera aceptable.`;
+                result.className = 'result warning';
+                feedback.textContent = "Estás en el camino correcto, pero hay áreas de mejora. Considera planificar mejor y diversificar tus ingresos.";
             } else {
-                feedback.textContent = "¡Excelente manejo financiero!: Tus hábitos financieros son sólidos. Continúa fortaleciendo tu planificación y metas a largo plazo.";
+                result.textContent = `Tu puntaje total es ${totalScore}. ¡Excelente manejo financiero!`;
+                result.className = 'result success';
+                feedback.textContent = "Tus hábitos financieros son sólidos. Continúa fortaleciendo tu planificación y metas a largo plazo.";
             }
         }
     </script>
