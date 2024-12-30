@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Cashflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tu Cashflow</h1>
+        <p class="intro">Calcular y analizar tu cashflow te ayudará a tomar decisiones financieras más informadas y a planificar tu crecimiento económico. Responde estas preguntas con calma y detalle.</p>
+
+        <div class="question">
+            <h3>1) Consulta tu lista de Excel. Suma todos tus ingresos. Llevas apuntando gastos durante ya medio mes. Estima tus gastos para el mes completo.</h3>
+            <textarea placeholder="Escribe aquí tus cálculos..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>2) Calcula tu cashflow actual (si gastas más de lo que ingresas, puede ser negativo), en dinero y en porcentaje.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>3) Fíjate una meta a qué porcentaje aumentar tu cashflow en los próximos tres meses.</h3>
+            <textarea placeholder="Escribe aquí tu meta..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>4) ¿Cómo lo vas a hacer? Define detalladamente tu estrategia.</h3>
+            <textarea placeholder="Escribe aquí tu estrategia..."></textarea>
+        </div>
+
+        <button class="print-button" onclick="window.print()">Imprimir Cuestionario</button>
+    </div>
+</body>
+</html>

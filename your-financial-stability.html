@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Estabilidad Financiera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question textarea, .question input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tu Estabilidad Financiera</h1>
+        <p class="intro">Planificar tu estabilidad financiera requiere analizar y establecer fondos para el corto, mediano y largo plazo. Responde las preguntas para organizar tu estrategia.</p>
+
+        <h2>El Corto Plazo: Tu Fondo de Tranquilidad</h2>
+        <div class="question">
+            <h3>1) Suma tus gastos indispensables y necesarios por mes:</h3>
+            <input type="number" id="monthlyExpenses" placeholder="Escribe aquí tus gastos mensuales...">
+        </div>
+        <div class="question">
+            <h3>2) Decide si tu Fondo de Tranquilidad debe ser para: 3, 6 o 12 meses</h3>
+            <input type="number" id="monthsChosen" placeholder="Escribe aquí el número de meses...">
+        </div>
+        <div class="question">
+            <h3>3) Multiplica la suma de gastos del punto 1 por la cantidad de meses elegida en el punto 2.</h3>
+            <input type="number" id="tranquilityFund" placeholder="Calcula aquí tu fondo de tranquilidad...">
+        </div>
+
+        <h2>El Largo Plazo: Tu Jubilación</h2>
+        <div class="question">
+            <h3>1) Revisa tu línea de vida y apunta cuántos años te quedan para crear tu jubilación elegida.</h3>
+            <input type="number" id="yearsToRetire" placeholder="Escribe aquí los años hasta tu jubilación...">
+        </div>
+        <div class="question">
+            <h3>2) Decide un monto de entre 100 y 600 € mensuales que vas a apartar regularmente para tu largo plazo.</h3>
+            <input type="number" id="monthlySavings" placeholder="Escribe aquí tu ahorro mensual para jubilación...">
+        </div>
+
+        <h2>El Mediano Plazo: Tus Inversiones</h2>
+        <div class="question">
+            <h3>1) Rescata la cantidad de cashflow mensual con la que cuentas.</h3>
+            <input type="number" id="cashflow" placeholder="Escribe aquí tu cashflow mensual...">
+        </div>
+        <div class="question">
+            <h3>2) Réstale lo que vas a apartar mensualmente para el corto y el largo plazo.</h3>
+            <input type="number" id="remainingCashflow" placeholder="Calcula aquí tu cashflow restante...">
+        </div>
+        <div class="question">
+            <h3>3) Aprende sobre los campos de inversión que te apasionan.</h3>
+            <textarea placeholder="Escribe aquí tus ideas de inversión..."></textarea>
+        </div>
+
+        <button class="print-button" onclick="window.print()">Imprimir Plan Financiero</button>
+    </div>
+</body>
+</html>
