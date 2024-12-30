@@ -13,11 +13,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
+    - name: Setup Pages Artifact
+      run: mkdir -p public && cp -r * public
+
+    - name: Upload Pages Artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: public
 
     - name: Deploy to GitHub Pages
-      uses: actions/upload-pages-artifact@v1
-
-    - name: Publish to GitHub Pages
       uses: actions/deploy-pages@v1
