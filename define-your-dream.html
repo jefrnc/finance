@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definir tu Sueño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Definir tu Sueño</h1>
+        <p class="intro">Te recomiendo rellenar este cuestionario a mano o directamente aquí. Reflexionar sobre estas preguntas te ayudará a clarificar tus metas y encontrar tu propósito.</p>
+
+        <div class="question">
+            <h3>1) ¿Qué actividades te apasiona realizar?</h3>
+            <p>¿Qué te emociona y te “carga las pilas”? ¿Haciendo qué te olvidas del tiempo? ¿En cuáles actividades consigues resultados extraordinarios? (Haz una lista de mínimo 15 puntos)</p>
+            <textarea placeholder="Escribe aquí tus respuestas..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>2) Si mañana despiertas y ya no necesitas generar ingresos, ¿qué harías durante el día?</h3>
+            <p>Descríbelo detalladamente.</p>
+            <textarea placeholder="Escribe aquí tus respuestas..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>3) Escribe una lista de todos tus talentos.</h3>
+            <p>Apunta todo aquello que se te da hacer con facilidad, sobre lo que tienes conocimiento o habilidad. (Mínimo 30 puntos, si son 50 mejor)</p>
+            <textarea placeholder="Escribe aquí tus respuestas..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>4) ¿Qué quisieras crear que perdure aún cuando ya no estés?</h3>
+            <p>¿Qué te gustaría que recordara la gente de ti? ¿Qué huella quieres dejar con tu vida en este planeta, en la vida de las demás personas?</p>
+            <textarea placeholder="Escribe aquí tus respuestas..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>5) Formula en tres a cinco frases cuál es tu misión en esta vida.</h3>
+            <p>Resumiendo tus respuestas anteriores, ¿qué es lo que te hace vivir en plenitud?</p>
+            <textarea placeholder="Escribe aquí tus respuestas..."></textarea>
+        </div>
+
+        <button class="print-button" onclick="window.print()">Imprimir Cuestionario</button>
+    </div>
+</body>
+</html>
