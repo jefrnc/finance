@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sueño en Cifras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        p.intro {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .question textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .print-button:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tu Sueño en Cifras</h1>
+        <p class="intro">Reflexionar y plasmar tus metas financieras en números te ayudará a planificar mejor tu futuro. Responde estas preguntas con calma y detalle.</p>
+
+        <div class="question">
+            <h3>1) ¿A qué edad quieres dejar de ser obligad@ a generar ingresos para cubrir tus gastos (jubilarte)?</h3>
+            <textarea placeholder="Escribe aquí tu respuesta..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>2) ¿Cuántos miles de euros mensuales necesitarás para el estilo de vida que quieras para tu jubilación?</h3>
+            <textarea placeholder="Escribe aquí tu respuesta..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>3) ¿Cuál estimas será tu esperanza de vida?</h3>
+            <textarea placeholder="Escribe aquí tu respuesta..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>4) Ahora resta de tu esperanza de vida, la edad con la que te quieres jubilar. Obtendrás los años que vas a vivir jubilad@.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>5) Multiplica esta cantidad de años por 12.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>6) La cantidad de meses resultantes del cálculo anterior, multiplícala por la cantidad de euros de la pregunta 2. Obtendrás la necesidad de capital que tienes para esta etapa de vida.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>7) Calcula los años desde tu edad actual hasta tu edad elegida de jubilación. Multiplícalos por 12.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>8) Divide el capital que has calculado en la pregunta 6 por la cantidad de meses que te resultó en la pregunta 7.</h3>
+            <textarea placeholder="Escribe aquí tu cálculo..."></textarea>
+        </div>
+
+        <div class="question">
+            <h3>9) Dibuja tu línea de vida aquí tal y como lo has visualizado, añadiéndole tus cifras al dibujo.</h3>
+            <textarea placeholder="Describe aquí tus observaciones..."></textarea>
+        </div>
+
+        <button class="print-button" onclick="window.print()">Imprimir Cuestionario</button>
+    </div>
+</body>
+</html>
